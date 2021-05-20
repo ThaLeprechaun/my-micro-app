@@ -10,13 +10,26 @@
         }
     </style>
 </head>
+<script src="../lib/microapp.js"></script>
+<script type="text/javascript">
+    function getMsisdn() {
+        var msisdn = Ayoba.getMsisdn();
+        document.getElementById("inputText").value = msisdn;
+        return msisdn
+    }
+</script>
 
 <body style="background-color:#1565c0;">
-    <script src="../lib/microapp.js"></script>
-    <script>
-        sayHello()
-    </script>
     <img src="logo.png" style="width:72px;" />
+    <div style="text-align:center;">
+        <input type="text" id="inputText">
+    </div>
+    <br />
+
+    <div style="text-align:center;">
+        <input type="button" value="Get MSISDN" onClick="getMsisdn()" />
+    </div>
+
 </body>
 
 </html>
